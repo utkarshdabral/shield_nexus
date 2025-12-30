@@ -1,0 +1,20 @@
+{
+    "name": "situational-awareness-dashboard",
+    "version": "1.0.0",
+    "description": "Unified dashboard for crowd anomaly detection and sentiment analysis",
+    "private": true,
+    "scripts": {
+        "install:all": "npm run install:backend && npm run install:frontend",
+        "install:backend": "cd backend && npm install",
+        "install:frontend": "cd frontend && npm install",
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev:backend": "cd backend && npm run dev",
+        "dev:frontend": "cd frontend && npm run dev",
+        "build": "cd frontend && npm run build",
+        "start": "cd backend && npm start",
+        "init-db": "cd backend && npm run init-db"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
